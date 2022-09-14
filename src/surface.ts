@@ -32,6 +32,7 @@ export const CreateSurfaceWithColormap = async (vertexData: Float32Array, normal
     const colorBuffer = CreateGPUBuffer(device, colorData);
  
     const pipeline = device.createRenderPipeline({
+        layout:'auto',
         vertex: {
             module: device.createShaderModule({                    
                 code: shader
